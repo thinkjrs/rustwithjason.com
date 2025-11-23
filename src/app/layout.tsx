@@ -11,9 +11,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Everything Starts as a Square - Get lost in the world of icon design',
+  title:
+    'Discover the Power of Rust: The Ultimate Guide for Modern Programming',
   description:
-    'A book and video course that teaches you how to design your own icons from scratch.',
+    "The essential guide to rocking Rust, the modern systems programming language that's taking the software world by storm. A print and digital companion for developers seeking to master Rust's unique features and capabilities.",
 }
 
 export default function RootLayout({
