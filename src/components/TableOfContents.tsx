@@ -7,28 +7,59 @@ import {
 import { SectionHeading } from '@/components/SectionHeading'
 
 const tableOfContents = {
-  'Getting started': {
-    'Getting started': 1,
-    'Intro to Figma': 15,
-    'Setting up your first artboard': 20,
+  'Getting Started': {
+    'Installing Rust and writing your first program': 1,
+    'Understanding Cargo': 8,
+    'Building and running projects': 10,
   },
-  Fundamentals: {
-    'Strokes and fills': 21,
-    'End points': 22,
-    'Bezier curves': 26,
-    'Designing on a grid': 31,
-    'Vector shapes': 45,
+  'A Real Program': {
+    'Fetching data asynchronously': 11,
+    'Working with external crates': 12,
+    'Handling JSON and user input': 13,
   },
-  'Boolean operations': {
-    'Combining shapes': 50,
-    'Subtracting shapes': 57,
-    'Intersecting shapes': 66,
-    Flattening: 78,
+  'Core Concepts': {
+    'Variables and types': 18,
+    'Shadowing and mutability': 19,
+    'Tuples and arrays': 21,
+    'Expressions vs statements': 21,
   },
-  'Optimizing for production': {
-    'Preparing for SVG': 82,
-    'Configuring your export settings': 88,
-    'Minifying and removing metadata': 95,
+  'Ownership and Borrowing': {
+    'Stack vs heap': 23,
+    'Scopes and moves': 24,
+    'References and borrowing': 26,
+    Slices: 26,
+  },
+  'Structs, Enums, and Traits': {
+    'Defining structs': 28,
+    'Enums and pattern matching': 33,
+    'Trait implementations': 67,
+  },
+  Collections: {
+    Vectors: 44,
+    Strings: 47,
+    'Hash Maps': 49,
+    'Collection projects': 51,
+  },
+  'Errors and Testing': {
+    'Recoverable vs unrecoverable errors': 53,
+    'The ? operator': 57,
+    'Unit testing': 73,
+    'Integration testing': 76,
+  },
+  'Generics and Lifetimes': {
+    'Lifetime annotations': 60,
+    'Generic types': 63,
+    'Traits and bounds': 68,
+  },
+  'Concurrency and Patterns': {
+    'Threads and mutexes': 115,
+    'Smart pointers': 104,
+    'Destructuring and patterns': 123,
+  },
+  'Real-World Rust': {
+    Benchmarking: 131,
+    'Building a portfolio allocation library': 79,
+    'Full-stack Rust web app': 137,
   },
 }
 
@@ -48,9 +79,9 @@ export function TableOfContents() {
           need to know is inside.
         </p>
         <p className="mt-4 text-lg tracking-tight text-slate-700">
-          “Everything Starts as a Square” is comprised of 240 tightly edited,
-          highly visual pages designed to teach you everything you need to know
-          about icon design with no unnecessary filler.
+          “Rust With Jason” is comprised tightly edited, pages designed to teach
+          you everything you need as a modern Rust learning companion with a
+          no-nonsense approach.
         </p>
         <Expandable>
           <ol role="list" className="mt-16 space-y-10 sm:space-y-16">
