@@ -25,7 +25,7 @@ function Plan({
     <div
       className={clsx(
         'relative px-4 py-16 sm:rounded-5xl sm:px-10 md:py-12 lg:px-12',
-        featured && 'bg-blue-600 sm:shadow-lg',
+        featured && 'bg-orange-600 sm:shadow-lg',
       )}
     >
       {featured && (
@@ -54,7 +54,7 @@ function Plan({
           <span
             className={clsx(
               'text-[1.75rem]/9',
-              featured ? 'text-blue-200' : 'text-slate-500',
+              featured ? 'text-orange-200' : 'text-slate-500',
             )}
           >
             $
