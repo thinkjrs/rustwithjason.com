@@ -106,7 +106,7 @@ export function NavBar() {
                 <>
                   <span
                     aria-hidden="true"
-                    className="font-mono text-sm text-blue-600"
+                    className="font-mono text-sm text-orange-600"
                   >
                     {(mobileActiveIndex + 1).toString().padStart(2, '0')}
                   </span>
@@ -141,7 +141,7 @@ export function NavBar() {
                 >
                   <span
                     aria-hidden="true"
-                    className="font-mono text-sm text-blue-600"
+                    className="font-mono text-sm text-orange-600"
                   >
                     {(sectionIndex + 1).toString().padStart(2, '0')}
                   </span>
@@ -167,8 +167,8 @@ export function NavBar() {
                 className={clsx(
                   'flex w-full flex-col items-center justify-center border-b-2 before:mb-2 before:font-mono before:text-sm before:content-[counter(section,decimal-leading-zero)]',
                   sectionIndex === activeIndex
-                    ? 'border-blue-600 bg-blue-50 text-blue-600 before:text-blue-600'
-                    : 'border-transparent before:text-slate-500 hover:bg-blue-50/40 hover:before:text-slate-900',
+                    ? 'border-orange-600 bg-orange-50 text-orange-600 before:text-orange-600'
+                    : 'border-transparent before:text-slate-500 hover:bg-orange-50/40 hover:before:text-slate-900',
                 )}
               >
                 {section.title}
