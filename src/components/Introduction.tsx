@@ -12,45 +12,47 @@ export function Introduction() {
     >
       <Container className="text-lg tracking-tight text-slate-700">
         <p className="font-display text-4xl font-bold tracking-tight text-slate-900">
-          “Everything Starts as a Square” is a book and video course that
-          teaches you a simple method to designing icons that anyone can learn.
+          {`“Rust With Jason” is your essential guide to rocking Rust, the modern
+          systems programming language that's taking the software world by
+          storm.`}
         </p>
         <p className="mt-4">
-          Before I learned how to design icons myself, I always imagined that
-          they were drawn by hand using the pen tool, some sort of fancy
-          graphics tablet, and hours and hours spent manually fine-tuning bezier
-          curves.
+          {`Whether you're an experienced developer looking to expand your
+          language set or a beginner eager to dive into the world of systems
+          programming, this book is designed to equip you with the knowledge and
+          practical skills you need.`}
         </p>
         <p className="mt-4">
           But it turns out this isn’t how great icon designers work at all.
+          {`Rust is known for its emphasis on safety, speed, and concurrency – qualities that are indispensable in today's software development landscape.`}
         </p>
         <p className="mt-4">
-          In “Everything Starts as a Square”, you’ll learn the systems experts
-          use to create pixel perfect icons, without relying on a steady hand.
+          {`In this comprehensive guide, you'll explore the core concepts of Rust, from basic syntax and data types to more advanced topics like ownership, lifetimes, and concurrency. Each chapter is packed with clear explanations, practical examples, and hands-on exercises to reinforce your learning and build your confidence.`}
         </p>
         <ul role="list" className="mt-8 space-y-3">
           {[
-            'Using boolean operations to combine basic shapes into complex icons',
-            'How to adapt icons to different sizes',
-            'Translating icons from an outline style to a solid style',
-            'Identifying the characteristics that make an icon set cohesive',
-            'Figma features and keyboard shortcuts to speed up your workflow',
+            'Understanding Rust’s memory model so you can reason clearly about ownership, borrowing, and lifetimes',
+            'Building real programs as you go, from small command line tools to async networked apps',
+            'Working with Rust’s core building blocks and using them together to shape meaningful programs',
+            'Developing reliable habits around errors, testing, benchmarking, and project structure',
+            'Applying Rust to practical engineering problems and turning concepts into working systems',
           ].map((feature) => (
             <li key={feature} className="flex">
-              <CheckIcon className="h-8 w-8 flex-none fill-blue-500" />
+              <CheckIcon className="h-8 w-8 flex-none fill-orange-500" />
               <span className="ml-4">{feature}</span>
             </li>
           ))}
         </ul>
         <p className="mt-8">
-          By the end of the book, you’ll have all the confidence you need to dig
-          in and start creating beautiful icons that can hold their own against
-          any of the sets you can find online.
+          {`By the end of this journey, you'll not only have a deep understanding of Rust's capabilities but also the ability to apply your knowledge to real-world projects. Whether you're building web applications, developing low-level systems software, or exploring new programming paradigms, "Rust with Jason" will be your trusted companion on this exciting adventure.`}
+        </p>
+        <p className="mt-8">
+          {`Join the growing community of Rustaceans and unlock the full potential of Rust. Get your copy of "Rust With Jason" today and start crafting robust, reliable, and high-performance software!`}
         </p>
         <p className="mt-10">
           <Link
             href="#free-chapters"
-            className="text-base font-medium text-blue-600 hover:text-blue-800"
+            className="text-base font-medium text-orange-600 hover:text-orange-800"
           >
             Get two free chapters straight to your inbox{' '}
             <span aria-hidden="true">&rarr;</span>
