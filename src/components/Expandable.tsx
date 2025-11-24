@@ -41,7 +41,7 @@ export function Expandable(props: React.ComponentPropsWithoutRef<'div'>) {
 
 export function ExpandableItems({
   children,
-  limit = 2,
+  limit = 4,
 }: {
   children: React.ReactNode
   limit?: number
@@ -59,11 +59,11 @@ export function ExpandableButton({ children }: { children: React.ReactNode }) {
       <div className="mt-10 flex justify-center">
         <button
           type="button"
-          className="flex items-center text-base font-medium tracking-tight text-slate-900 hover:text-slate-700"
+          className="group flex cursor-pointer items-center text-base font-medium tracking-tight text-slate-900 hover:text-slate-700"
           onClick={expand}
         >
           {children}
-          <ArrowDownIcon className="ml-2 h-6 w-6" />
+          <ArrowDownIcon className="ml-2 h-6 w-6 group-hover:text-slate-600" />
         </button>
       </div>
     )
