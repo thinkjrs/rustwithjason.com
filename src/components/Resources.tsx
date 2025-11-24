@@ -9,9 +9,9 @@ import videoPlayerImage from '@/images/resources/video-player.svg'
 
 const resources = [
   {
-    title: 'Figma icon templates',
+    title: 'Publishing Rust Crates',
     description:
-      'Perfectly structured templates for quickly designing new icons at dozens of common sizes.',
+      'Publish a Rust crate to crates.io and make it available for others to use in their projects.',
     image: function FigmaImage() {
       return (
         <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(#2C313D_35%,#000)]">
@@ -21,9 +21,9 @@ const resources = [
     },
   },
   {
-    title: 'Weekly icon teardowns',
+    title: 'Performant Financial Dashboard',
     description:
-      'Weekly videos where we dissect and recreate beautiful icons we find on the web.',
+      'Build a financial dashboard to simulate and allocate investments with React on the frontend and Rust on the backend.',
     image: function VideoPlayerImage() {
       return (
         <div className="absolute inset-0 flex items-center justify-center">
@@ -44,9 +44,9 @@ const resources = [
     },
   },
   {
-    title: 'Community of icon designers',
+    title: 'Full Code Examples',
     description:
-      "A private Discord server where you can get help and give feedback on each others' work.",
+      "A private Github repository with full code examples for each chapter's projects.",
     image: function DiscordImage() {
       return (
         <div className="absolute inset-0 flex items-center justify-center bg-[#6366F1]">
@@ -69,13 +69,13 @@ export function Resources() {
           Resources
         </SectionHeading>
         <p className="mt-8 font-display text-4xl font-bold tracking-tight text-slate-900">
-          Tools and resources you can use to get started even faster and
-          progress even further.
+          Tools and resources you get along with the book to maximize your
+          progress.
         </p>
         <p className="mt-4 text-lg tracking-tight text-slate-700">
-          Design assets, icon teardowns, and a community of fellow icon
-          designers where you can ask questions, get feedback, and accelerate
-          your learning.
+          {`From detailed code examples to interactive apps, you'll build your
+          skills and build a solid Rust foundation along with the official book
+          and resources.`}
         </p>
       </Container>
       <Container size="lg" className="mt-16">
