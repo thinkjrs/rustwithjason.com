@@ -119,35 +119,30 @@ export function Pricing() {
           Pick your package
         </p>
         <p className="mt-4 max-w-xl text-lg tracking-tight text-slate-600">
-          “Everything Starts as a Square” is available in two different packages
-          so you can pick the one that’s right for you.
+          “Rust With Jason” is available as a regular book and digital only, so
+          you can choose the option that works best for you.
         </p>
       </Container>
       <div className="mx-auto mt-16 max-w-5xl lg:px-6">
         <div className="grid bg-slate-50 sm:px-6 sm:pb-16 md:grid-cols-2 md:rounded-6xl md:px-8 md:pt-16 lg:p-20">
           <Plan
-            name="Essential"
-            description="The perfect starting point if you’re on a budget."
-            price="15"
+            name="All-digital"
+            description="Kill no trees — get the ebook, app, and code."
+            price="9.98"
             href="#"
-            features={[
-              'The 240-page ebook',
-              'Figma icon templates',
-              'Community access',
-            ]}
+            features={['The ebook', 'The app', 'Github access']}
           />
           <Plan
             featured
-            name="Complete"
-            description="Everything icon resource you could ever ask for."
-            price="229"
+            name="Physical & digital"
+            description="The complete experience — print book, app, and code."
+            price="29.98"
             href="#"
             features={[
-              'The 240-page ebook',
-              'Figma icon templates',
-              'Over an hour of screencasts',
-              'Weekly icon teardowns',
-              'Community access',
+              'The ebook',
+              'The print book',
+              'The app',
+              'Github access',
             ]}
           />
         </div>
