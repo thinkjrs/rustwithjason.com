@@ -1,4 +1,5 @@
 import { GridPattern } from '@/components/GridPattern'
+import Link from 'next/link'
 
 export function Footer() {
   return (
@@ -7,7 +8,16 @@ export function Footer() {
         <GridPattern x="50%" />
       </div>
       <div className="relative text-center text-sm text-slate-600">
-        <p>Copyright &copy; {new Date().getFullYear()} Lindehoff Design, LLC</p>
+        <p>
+          Copyright &copy; {new Date().getFullYear()}{' '}
+          <Link
+            href="https://0x3f1.com"
+            target="_blank"
+            className="hover:text-slate-500"
+          >
+            <code>0x3f1 Licensing LLC</code>
+          </Link>
+        </p>
         <p>All rights reserved.</p>
       </div>
     </footer>
