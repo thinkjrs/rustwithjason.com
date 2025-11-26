@@ -3,15 +3,7 @@ import Link from 'next/link'
 
 import { GridPattern } from '@/components/GridPattern'
 import { SectionHeading } from '@/components/SectionHeading'
-import authorImage from '@/images/avatars/author.png'
-
-function XIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" {...props}>
-      <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8132L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
-    </svg>
-  )
-}
+import authorImage from '@/images/avatars/author.jpg'
 
 export function Author() {
   return (
@@ -38,25 +30,30 @@ export function Author() {
               Author
             </SectionHeading>
             <p className="mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
-              <span className="block text-orange-600">Mira Lindehoff –</span> Hey
-              there, I’m the author behind ‘Everything Starts as a Square’.
+              <span className="block text-orange-600">
+                Jason R. Stevens, CFA -
+              </span>{' '}
+              Hey there, I’m the Jason behind ‘Rust With Jason’.
             </p>
             <p className="mt-4 text-lg tracking-tight text-slate-700">
-              I’ve been designing icons professionally for over a decade and
-              have worked with dozens of the biggest brands to create custom
-              sets for their products. I’m an accomplished conference speaker,
-              and have been teaching icon design workshops every month for the
-              last three years. I’ve worked with designers of all skill levels
-              and honed my way of teaching to really click for anyone who has
-              the itch to start designing their own icons.
+              {`I’ve been building software professionally for over a decade and
+              have built applications ranging from institutional trading systems
+              and securities pricers to consumer web and mobile aplications. I’m
+              also a Chartered Financial Analyst (CFA) charterholder, with deep
+              experience in the financial and investment management industries.
+              As teaching staff in the graduate department of Financial
+              Mathematics at the University of Chicago, I've had the privilege
+              helping to educate the next generation of quants and financial
+              engineers.`}
             </p>
             <p className="mt-8">
               <Link
-                href="#"
+                href="https://thinkjrs.dev"
                 className="inline-flex items-center text-base font-medium tracking-tight text-slate-900"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <XIcon className="h-10 w-10 fill-current" />
-                <span className="ml-4">Follow on X</span>
+                <span className="">➡️ Read my blog</span>
               </Link>
             </p>
           </div>
