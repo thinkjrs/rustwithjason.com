@@ -38,7 +38,9 @@ type ButtonProps = (
     }
 ) &
   (
-    | Omit<React.ComponentPropsWithoutRef<typeof Link>, 'color'>
+    | (Omit<React.ComponentPropsWithoutRef<typeof Link>, 'color'> & {
+        disabled?: boolean
+      })
     | (Omit<React.ComponentPropsWithoutRef<'button'>, 'color'> & {
         href?: undefined
       })
@@ -58,9 +60,15 @@ export function Button({ className, ...props }: ButtonProps) {
     className,
   )
 
-  return typeof props.href === 'undefined' ? (
-    <button className={className} {...props} />
+  let { disabled, href, ...rest } = props
+
+  if (typeof href !== 'undefined' && disabled) {
+    href = undefined
+  }
+
+  return typeof href === 'undefined' ? (
+    <button className={className} disabled={disabled} {...rest} />
   ) : (
-    <Link className={className} {...props} />
+    <Link href={href} className={className} {...rest} />
   )
 }
