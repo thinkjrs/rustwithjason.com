@@ -13,6 +13,8 @@ function Plan({
   features,
   href,
   featured = false,
+  buttonText = 'Buy book',
+  disabled = false,
 }: {
   name: string
   description: string
@@ -20,6 +22,8 @@ function Plan({
   features: Array<string>
   href: string
   featured?: boolean
+  buttonText?: string
+  disabled?: boolean
 }) {
   return (
     <div
@@ -27,6 +31,7 @@ function Plan({
         'relative px-4 py-16 sm:rounded-5xl sm:px-10 md:py-12 lg:px-12',
         featured && 'bg-orange-600 sm:shadow-lg',
       )}
+      title={disabled ? 'Coming soon!' : ''}
     >
       {featured && (
         <div className="absolute inset-0 mask-[linear-gradient(white,transparent)] text-white/10">
@@ -94,10 +99,11 @@ function Plan({
         <Button
           href={href}
           color={featured ? 'white' : 'slate'}
-          className="mt-8"
+          className={clsx("mt-8", disabled && 'opacity-50 cursor-not-allowed disabled')}
           aria-label={`Get started with the ${name} plan for $${price}`}
+          disabled={disabled}
         >
-          Get started
+          {buttonText || `Get started`}
         </Button>
       </div>
     </div>
@@ -138,6 +144,7 @@ export function Pricing() {
             description="The complete experience — print book, app, and code."
             price="29.98"
             href="#"
+            disabled={true}
             features={[
               'The ebook',
               'The print book',
