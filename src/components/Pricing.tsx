@@ -129,7 +129,7 @@ export function Pricing() {
             name="All-digital"
             description="Kill no trees — get the ebook, app, and code."
             price="9.98"
-            href="#"
+            href="https://buy.stripe.com/00w5kw7E7a9gcGuekn7ok00"
             features={['The ebook', 'The app', 'Github access']}
           />
           <Plan
