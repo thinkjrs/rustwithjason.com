@@ -12,6 +12,7 @@ import { TableOfContents } from '@/components/TableOfContents'
 //import { Testimonials } from '@/components/Testimonials'
 //import avatarImage1 from '@/images/avatars/avatar-1.png'
 //import avatarImage2 from '@/images/avatars/avatar-2.png'
+import { CallToAction } from '@/components/CallToAction'
 
 export default function Home() {
   return (
@@ -52,6 +53,7 @@ export default function Home() {
       <Pricing />
       {/*<Testimonials />*/}
       <Author />
+      <CallToAction />
       <Footer />
     </>
   )
