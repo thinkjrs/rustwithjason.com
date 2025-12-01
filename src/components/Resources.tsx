@@ -3,9 +3,9 @@ import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { SectionHeading } from '@/components/SectionHeading'
 import abstractBackgroundImage from '@/images/resources/abstract-background.png'
-import discordImage from '@/images/resources/discord.svg'
-import figmaImage from '@/images/resources/figma.svg'
-import videoPlayerImage from '@/images/resources/video-player.svg'
+import discordImage from '@/images/resources/examples.webp'
+import figmaImage from '@/images/resources/publishing.webp'
+import videoPlayerImage from '@/images/resources/fullstack.webp'
 
 const resources = [
   {
