@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     'The hands-on Rust companion built for serious learners. Read, type, build, and repeat through clear examples, practical projects, and real-world Rust engineering.',
   openGraph: {
-    title: 'Rust With Jason — Your Ultimate Hands-On Guide to Mastering Rust',
+    title: 'Rust With Jason - Your Ultimate Hands-On Guide to Rust',
     description:
       'The ultimate companion to learning the Rust programming language. A practical, hands-on guide designed to take you from fundamentals to mastery.',
     url: 'https://rustwithjason.com',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rust With Jason — Your Ultimate Hands-On Guide to Mastering Rust',
+    title: 'Rust With Jason - Your Ultimate Hands-On Guide to Rust',
     description:
       'The hands-on Rust guide to keep you off the sidelines. Read, type, build, and level up your Rust skills through practical real-world examples.',
     images: ['/og.webp'],
