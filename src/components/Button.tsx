@@ -1,3 +1,4 @@
+// src/components/Button.tsx
 import Link from 'next/link'
 import clsx from 'clsx'
 
@@ -27,7 +28,7 @@ const variantStyles = {
   },
 }
 
-type ButtonProps = (
+type VariantProps =
   | {
       variant?: 'solid'
       color?: keyof typeof variantStyles.solid
@@ -36,39 +37,50 @@ type ButtonProps = (
       variant: 'outline'
       color?: keyof typeof variantStyles.outline
     }
-) &
-  (
-    | (Omit<React.ComponentPropsWithoutRef<typeof Link>, 'color'> & {
-        disabled?: boolean
-      })
-    | (Omit<React.ComponentPropsWithoutRef<'button'>, 'color'> & {
-        href?: undefined
-      })
-  )
+
+type LinkLikeProps = Omit<React.ComponentPropsWithoutRef<typeof Link>, 'color'>
+
+type ButtonAsLink = VariantProps &
+  LinkLikeProps & {
+    disabled?: boolean
+  }
+
+type NativeButtonProps = Omit<
+  React.ComponentPropsWithoutRef<'button'>,
+  'color'
+> & {
+  href?: undefined
+}
+
+type ButtonAsButton = VariantProps & NativeButtonProps
+
+export type ButtonProps = ButtonAsLink | ButtonAsButton
 
 export function Button({ className, ...props }: ButtonProps) {
-  props.variant ??= 'solid'
-  props.color ??= 'slate'
+  const variant = props.variant ?? 'solid'
+  const color =
+    props.color ??
+    (variant === 'outline'
+      ? ('slate' as keyof typeof variantStyles.outline)
+      : ('slate' as keyof typeof variantStyles.solid))
 
-  className = clsx(
-    baseStyles[props.variant],
-    props.variant === 'outline'
-      ? variantStyles.outline[props.color]
-      : props.variant === 'solid'
-        ? variantStyles.solid[props.color]
-        : undefined,
+  const classes = clsx(
+    baseStyles[variant],
+    variant === 'outline'
+      ? variantStyles.outline[color as keyof typeof variantStyles.outline]
+      : variantStyles.solid[color as keyof typeof variantStyles.solid],
     className,
   )
 
-  let { disabled, href, ...rest } = props
+  const isLink = 'href' in props && props.href !== undefined && !props.disabled
 
-  if (typeof href !== 'undefined' && disabled) {
-    href = undefined
+  if (isLink) {
+    const { href, disabled: _disabled, ...linkProps } = props as ButtonAsLink
+
+    return <Link href={href} className={classes} {...linkProps} />
   }
 
-  return typeof href === 'undefined' ? (
-    <button className={className} disabled={disabled} {...rest} />
-  ) : (
-    <Link href={href} className={className} {...rest} />
-  )
+  const { disabled, href: _href, ...buttonProps } = props as ButtonAsButton
+
+  return <button className={classes} disabled={disabled} {...buttonProps} />
 }
