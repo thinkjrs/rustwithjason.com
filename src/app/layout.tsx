@@ -10,7 +10,7 @@ const inter = Inter({
   variable: '--font-inter',
 })
 export const metadata: Metadata = {
-  title: 'Rust With Jason — Your Ultimate Hands-On Guide to Mastering Rust',
+  title: 'Rust With Jason - Your Ultimate Hands-On Guide to Rust',
   description:
     'The hands-on Rust companion built for serious learners. Read, type, build, and repeat through clear examples, practical projects, and real-world Rust engineering.',
   openGraph: {
