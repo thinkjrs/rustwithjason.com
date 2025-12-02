@@ -11,12 +11,33 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title:
-    'Discover the Power of Rust: The Ultimate Guide for Modern Programming',
+  title: 'Rust With Jason',
   description:
-    "The essential guide to rocking Rust, the modern systems programming language that's taking the software world by storm. A print and digital companion for developers seeking to master Rust's unique features and capabilities.",
+    'Learn Rust — from fundamentals to advanced concepts. Practical, hands-on guides and examples for Rustaceans of all levels.',
+  openGraph: {
+    title: 'Rust With Jason',
+    description:
+      'Learn Rust — from fundamentals to advanced concepts. Practical, hands-on guides and examples for Rustaceans of all levels.',
+    url: 'https://rustwithjason.com',
+    siteName: 'Rust With Jason',
+    images: [
+      {
+        url: '/og.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Rust With Jason — Learn Rust',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rust With Jason',
+    description:
+      'Learn Rust — from fundamentals to advanced concepts. Practical, hands-on guides and examples for Rustaceans of all levels.',
+    images: ['/og.webp'],
+  },
 }
-
 export default function RootLayout({
   children,
 }: {
