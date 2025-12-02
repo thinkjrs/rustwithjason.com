@@ -9,35 +9,35 @@ const inter = Inter({
   display: 'swap',
   variable: '--font-inter',
 })
-
 export const metadata: Metadata = {
-  title: 'Rust With Jason',
+  title: 'Rust With Jason — Your Ultimate Hands-On Guide to Mastering Rust',
   description:
-    'Learn Rust — from fundamentals to advanced concepts. Practical, hands-on guides and examples for Rustaceans of all levels.',
+    'The hands-on Rust companion built for serious learners. Read, type, build, and repeat through clear examples, practical projects, and real-world Rust engineering.',
   openGraph: {
-    title: 'Rust With Jason',
+    title: 'Rust With Jason — Your Ultimate Hands-On Guide to Mastering Rust',
     description:
-      'Learn Rust — from fundamentals to advanced concepts. Practical, hands-on guides and examples for Rustaceans of all levels.',
+      'The ultimate companion to learning the Rust programming language. A practical, hands-on guide designed to take you from fundamentals to mastery.',
     url: 'https://rustwithjason.com',
     siteName: 'Rust With Jason',
+    type: 'website',
     images: [
       {
         url: '/og.webp',
         width: 1200,
         height: 630,
-        alt: 'Rust With Jason — Learn Rust',
+        alt: 'Rust With Jason — The Ultimate Rust Learning Companion',
       },
     ],
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rust With Jason',
+    title: 'Rust With Jason — Your Ultimate Hands-On Guide to Mastering Rust',
     description:
-      'Learn Rust — from fundamentals to advanced concepts. Practical, hands-on guides and examples for Rustaceans of all levels.',
+      'The hands-on Rust guide to keep you off the sidelines. Read, type, build, and level up your Rust skills through practical real-world examples.',
     images: ['/og.webp'],
   },
 }
+
 export default function RootLayout({
   children,
 }: {
