@@ -23,7 +23,6 @@ export function Introduction() {
           practical skills you need.`}
         </p>
         <p className="mt-4">
-          But it turns out this isn’t how great icon designers work at all.
           {`Rust is known for its emphasis on safety, speed, and concurrency – qualities that are indispensable in today's software development landscape.`}
         </p>
         <p className="mt-4">
